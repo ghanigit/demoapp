@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Web App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>🚀 Maven Demo Web App</h1>
+        <p class="subtitle">Java 11 · Servlets · WAR · JUnit 5</p>
+    </header>
+
+    <section class="card">
+        <h2>👋 Hello Servlet</h2>
+        <p>Calls <code>GET /hello?name=...</code> and returns a greeting.</p>
+        <form action="hello" method="get">
+            <input type="text" name="name" placeholder="Enter your name" required>
+            <button type="submit" class="btn">Say Hello</button>
+        </form>
+    </section>
+
+    <section class="card">
+        <h2>🧮 Calculator Servlet</h2>
+        <p>Calls <code>POST /calculate</code>, uses <code>MathUtils</code> internally.</p>
+        <form action="calculate" method="post">
+            <div class="calc-row">
+                <input type="number" name="a" placeholder="A" required>
+                <select name="op">
+                    <option value="add">+</option>
+                    <option value="subtract">−</option>
+                    <option value="multiply">×</option>
+                    <option value="divide">÷</option>
+                </select>
+                <input type="number" name="b" placeholder="B" required>
+                <button type="submit" class="btn">=</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="card info">
+        <h2>📦 Maven Commands to Practice</h2>
+        <table>
+            <tr><th>Command</th><th>What it does</th></tr>
+            <tr><td><code>mvn test</code></td><td>Compiles &amp; runs JUnit 5 tests in <code>src/test/</code></td></tr>
+            <tr><td><code>mvn package</code></td><td>Runs tests, then builds <code>target/demo-webapp.war</code></td></tr>
+            <tr><td><code>mvn install</code></td><td>Same as package + copies WAR to your local <code>~/.m2</code> repository</td></tr>
+            <tr><td><code>mvn clean</code></td><td>Deletes the <code>target/</code> directory</td></tr>
+            <tr><td><code>mvn clean package</code></td><td>Fresh build from scratch</td></tr>
+        </table>
+    </section>
+</div>
+</body>
+</html>
